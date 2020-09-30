@@ -1,4 +1,4 @@
-# About
+# About 
 
-Personal HomePage
+Personal Project for Portofolio HomePage
 ![](screenshoot.png)
