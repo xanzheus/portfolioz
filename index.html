@@ -1,0 +1,1232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>Irfannur Diah - Full-Stack Designer</title>
+
+    <style>
+        /* Please ❤ this if you like it! */
+
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #c4c3ca;
+            background-color: #1A1A1A;
+            overflow-x: hidden;
+            /* overflow-y: hidden; */
+            -webkit-transition: all 300ms linear;
+            transition: all 300ms linear;
+
+        }
+
+        .gambar{
+            background: url(https://tympanus.net/Development/ImageDraggingEffects/2.cddf9094.jpg) no-repeat;
+            content: "";
+            height: 260px;
+            width: 180px;
+            top: 10px;
+            right: 100px;
+            position: absolute;
+            z-index: -2;
+            background-size: cover !important ;
+        }
+
+        body::before{
+            background: url(me.jpg);
+            /* background: url(https://tympanus.net/Development/ImageDraggingEffects/1.8af53f00.jpg) no-repeat; */
+            content: "";
+            height: 280px;
+            width: 172px;
+            bottom: 115px;
+            left: 60px;
+            position: absolute;
+            z-index: -2;
+            background-size: cover;
+            /* filter dahhh :v dimari -> https://www.cssfilters.co/ */
+            -webkit-filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%);
+            filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%) blur(10px);
+          
+       
+        }
+
+        [data-theme="dark"] {
+            --color-bg: #1A1A1A;
+            --color-contrast-high: #c4c3ca;
+        }
+
+        
+        [data-theme="blue"] {
+            --color-bg: #1A1A1A;
+            --color-contrast-high: #c4c3ca;
+        }
+
+        [data-theme] {
+            background-color: var(--color-bg, white);
+            color: var(--color-contrast-high, #313135);
+        }
+
+
+        h1 {
+            font-size: 34pt;
+            color: #fff;
+        }
+
+        .textline::before{
+            content: attr(data-text);
+            font-weight: 400;
+            font-size: 6vw;
+            line-height: 0.5;
+            margin: 5vw 0 0 0;
+            -webkit-text-stroke: 1px #ffc10724;
+            text-stroke: 1px #fff;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            color: transparent;
+            position: absolute;
+            top: 3px;
+            left: 31%;
+        }
+
+        p {
+            font-size: 14.5pt;
+            line-height: 1.4;
+            padding-top: 30px;
+            z-index: 99;
+            color: #a4a4a4;
+        }
+
+        a {
+            color: #fff;
+            /* #c4c3ca; */
+            /* text-decoration: underline; */
+            z-index: 1;
+        }
+
+        a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 900px;
+            padding-top: 50px;
+        }
+
+        header::after {
+            background: url(illus-kanan-bawah.svg) no-repeat;
+            content: "";
+            height: 320px;
+            width: 520px;
+            /* bottom: -70px; */
+            bottom: 0px;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        header::before {
+            background: url(avatar.svg) no-repeat;
+            content: "";
+            width: 258px;
+            height: 573px;
+            /* bottom: -70px; */
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .logo {
+            width: 252px;
+            height: 143px;
+        }
+
+        .brand {
+            padding-top: 50px;
+        }
+
+        .stuff {
+            font-size: 14px;
+            bottom: 12px;
+            position: relative;
+            border-bottom: 4px solid #fff;
+            display: inline-block;
+            padding-bottom: 4px;
+            text-decoration: none;            
+        }
+
+        .stuff:hover {
+            text-decoration: none;
+            color: #FBB03B;
+            border-bottom-color: #FBB03B;
+            transform: rotateY(3.51215deg) rotateX(-5.53915deg) rotateZ(0deg) scale(1.05);
+                    transition: all .4s cubic-bezier(.4,0,.2,1);
+        }
+
+        /* body:hover a {
+            opacity: 0.3;
+            transition: 0.2s ease;
+        }
+
+        body a:hover {
+            opacity: 1;
+            transform: rotateY(3.51215deg) rotateX(-5.53915deg) rotateZ(0deg) scale(1.05);
+                    transition: all .4s cubic-bezier(.4,0,.2,1);
+        } */
+
+        /* START TOOLTIP STYLES */
+        [tooltip] {
+            position: relative;
+            /* opinion 1 */
+        }
+
+        /* Applies to all tooltips */
+        [tooltip]::before,
+        [tooltip]::after {
+            text-transform: none;
+            /* opinion 2 */
+            font-size: .4em;
+            /* opinion 3 */
+            line-height: 1;
+            user-select: none;
+            pointer-events: none;
+            position: absolute;
+            display: none;
+            opacity: 0;
+        }
+
+        [tooltip]::before {
+            content: '';
+            border: 5px solid transparent;
+            /* opinion 4 */
+            z-index: 1001;
+            /* absurdity 1 */
+        }
+
+        [tooltip]::after {
+            content: attr(tooltip);
+            /* magic! */
+
+            /* most of the rest of this is opinion */
+            font-weight: 100;
+            text-align: center;
+
+            /* 
+            Let the content set the size of the tooltips 
+            but this will also keep them from being obnoxious
+            */
+            min-width: 3em;
+            max-width: 21em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 1ch 1.5ch;
+            border-radius: .3ch;
+            box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+            background: #333;
+            color: #fff;
+            z-index: 1000;
+            /* absurdity 2 */
+        }
+
+        /* Make the tooltips respond to hover */
+        [tooltip]:hover::before,
+        [tooltip]:hover::after {
+            display: block;
+        }
+
+        /* don't show empty tooltips */
+        [tooltip='']::before,
+        [tooltip='']::after {
+            display: none !important;
+        }
+
+        /* FLOW: UP */
+        [tooltip]:not([flow])::before,
+        [tooltip][flow^="up"]::before {
+            bottom: 100%;
+            border-bottom-width: 0;
+            border-top-color: #333;
+        }
+
+        [tooltip]:not([flow])::after,
+        [tooltip][flow^="up"]::after {
+            bottom: calc(100% + 5px);
+        }
+
+        [tooltip]:not([flow])::before,
+        [tooltip]:not([flow])::after,
+        [tooltip][flow^="up"]::before,
+        [tooltip][flow^="up"]::after {
+            left: 50%;
+            transform: translate(-50%, -.5em);
+        }
+
+        /* FLOW: DOWN */
+        [tooltip][flow^="down"]::before {
+            top: 100%;
+            border-top-width: 0;
+            border-bottom-color: #333;
+        }
+
+        [tooltip][flow^="down"]::after {
+            top: calc(100% + 5px);
+        }
+
+        [tooltip][flow^="down"]::before,
+        [tooltip][flow^="down"]::after {
+            left: 50%;
+            transform: translate(-50%, .5em);
+        }
+
+        /* FLOW: LEFT */
+        [tooltip][flow^="left"]::before {
+            top: 50%;
+            border-right-width: 0;
+            border-left-color: #333;
+            left: calc(0em - 5px);
+            transform: translate(-.5em, -50%);
+        }
+
+        [tooltip][flow^="left"]::after {
+            top: 50%;
+            right: calc(100% + 5px);
+            transform: translate(-.5em, -50%);
+        }
+
+        /* FLOW: RIGHT */
+        [tooltip][flow^="right"]::before {
+            top: 50%;
+            border-left-width: 0;
+            border-right-color: #333;
+            right: calc(0em - 5px);
+            transform: translate(.5em, -50%);
+        }
+
+        [tooltip][flow^="right"]::after {
+            top: 50%;
+            left: calc(100% + 5px);
+            transform: translate(.5em, -50%);
+        }
+
+        /* KEYFRAMES */
+        @keyframes tooltips-vert {
+            to {
+                opacity: .9;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @keyframes tooltips-horz {
+            to {
+                opacity: .9;
+                transform: translate(0, -50%);
+            }
+        }
+
+        /* FX All The Things */
+        [tooltip]:not([flow]):hover::before,
+        [tooltip]:not([flow]):hover::after,
+        [tooltip][flow^="up"]:hover::before,
+        [tooltip][flow^="up"]:hover::after,
+        [tooltip][flow^="down"]:hover::before,
+        [tooltip][flow^="down"]:hover::after {
+            animation: tooltips-vert 300ms ease-out forwards;
+        }
+
+        [tooltip][flow^="left"]:hover::before,
+        [tooltip][flow^="left"]:hover::after,
+        [tooltip][flow^="right"]:hover::before,
+        [tooltip][flow^="right"]:hover::after {
+            animation: tooltips-horz 300ms ease-out forwards;
+        }
+
+
+
+        .cirletext {
+            -webkit-animation: rotate 10s linear infinite;
+            animation: rotate 10s linear infinite;
+            width: 30vw;
+            height: 30vw;
+            position: absolute;
+            top: calc(50% - 15vw);
+            left: calc(50% - 15vw);
+            overflow: hidden;
+        }
+
+        .cirletext:after {
+            display: block;
+            content: "hello";
+        }
+
+        .cirletext .circle-text {
+            font: 100px/100px times;
+            letter-spacing: 22.5px;
+            width: 100%;
+            fill: white;
+        }
+
+        @-webkit-keyframes rotate {
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate {
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .round-text {
+            position: absolute;
+            right: 20%;
+            bottom: 100;
+        }
+
+        @keyframes offset {
+            to {
+                stroke-dashoffset: -500;
+            }
+        }
+
+
+        path,
+        line,
+        circle,
+        polygon {
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            animation: offset 4s infinite linear backwards;
+            /* animation: offset 6s infinite linear backwards; */
+        }
+
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            body {
+                overflow-y: auto;
+            }
+
+            header::before,
+            header::after {
+                background: none;
+            }
+
+            h1 {
+                font-size: 26pt;
+                text-align: center;
+            }
+
+            .container {
+                padding-top: 50px;
+                padding-left: 30px;
+            }
+
+            .round-text {
+                right: 50%;
+            }
+
+            p {
+                font-size: 12pt;
+            }
+
+            .gambar{
+                display: none;
+            }
+
+            body::before{
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 1288px) {
+
+            header::before,
+            header::after {
+                background: none;
+            }
+        }
+
+        /* 
+        header{
+            position: fixed;
+            height: 90%;
+            bottom: 10%;
+            right: 0;
+            left: 0;
+            top: 0;
+        }
+
+        section {
+        background: #fff;
+        position: relative;
+        height: 123.45%;
+        top: 99.5%;
+        padding: 10% 40px;
+        text-align: center;
+        }
+
+        html, body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        } */
+
+        a {
+            text-decoration: none;
+            color: var(--color-link);
+            outline: none;
+            cursor: pointer;
+            font-weight:400;
+        }
+
+        p a::after { 
+            content: ''; 
+            position: absolute; 
+            width: 100%; 
+            height: 1px; 
+            background: currentColor; 
+            bottom: -0.1vw; 
+            left: 0; 
+            opacity: 0; 
+            transform-origin: 0% 50%; 
+            transform: scaleX(0); 
+            transition: all 0.25s ease-out; 
+        } 
+        
+        p a:hover::after, 
+        p a:focus::after { 
+            opacity: 1; 
+            transform: scaleX(1); 
+        }
+
+        p a {
+            color: #c3c3c3;
+            font-style: italic;
+            position: relative;
+        }
+
+        
+        .modal-dialog {
+        max-width: 100%;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+        z-index: 100000;
+        border-radius: 0px;
+        }
+
+        .modal-content{
+        border-radius: 0px;
+        }
+
+        .modal-body{
+            overflow-y: auto;
+        }
+        
+        
+        /* cursor  */
+
+        * {
+        cursor: none;
+        }
+        @media only screen and (max-width: 1000px) {
+        * {
+            cursor: initial;
+        }
+        }
+
+        .circle-cursor {
+        position: fixed;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        border-radius: 50%;
+        box-sizing: border-box;
+        }
+        .circle-cursor--outer {
+        width: 30px;
+        height: 30px;
+        border: 2px solid  #ffc107;
+        z-index: 12000;
+        }
+        .circle-cursor--inner {
+        width: 5px;
+        height: 5px;
+        left: -2.5px;
+        top: -2.5px;
+        z-index: 11000;
+        background:  #ffc107;
+        }
+
+        .hover-it:hover{
+            font-style: italic;
+        }
+
+        
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+.horizontal-scroll {
+  width: 100vh;
+  height: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #2E2E2E;
+  padding: 30px;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
+          transform: rotate(-90deg) translate3d(0, -100vh, 0);
+}
+.horizontal-scroll > * {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+          transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+}
+.horizontal-scroll__block {
+  width: calc(100vh - 60px);
+  height: calc(100vh - 60px);
+  background: #FDFFFC;
+  position: relative;
+}
+.horizontal-scroll__block:not(:first-child) {
+  margin-top: 30px;
+}
+.horizontal-scroll__block .background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: no-repeat center center / cover;
+  opacity: .8;
+  background-blend-mode: luminosity;
+}
+.horizontal-scroll__block .letter {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  font-weight: normal;
+  font-size: 12em;
+  font-family: 'Playfair Display', serif;
+  color: white;
+}
+.horizontal-scroll__block--purple .background {
+  background-color: #52489C;
+}
+.horizontal-scroll__block--yellow .background {
+  background-color: #ECC30B;
+}
+.horizontal-scroll__block--orange .background {
+  background-color: #F37748;
+}
+.horizontal-scroll__block--blue .background {
+  background-color: #4D9DE0;
+}
+.horizontal-scroll__block--green .background {
+  background-color: #00BD9D;
+}
+.horizontal-scroll__block--pink .background {
+  background-color: #FB9F89;
+}
+
+    </style>
+</head>
+
+<body>
+
+    
+
+    <header>
+        <div class="center" id="headerc">
+            <div class="middle">
+
+                <div class="round-text">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10cm" height="10cm"
+                        viewBox="0 0 1000 1000" preserveAspectRatio="xMinYMin" class="cirletext">
+                        <defs>
+                            <path id="textPath" d="M 250 500 A 250,250 0 1 1 250 500.0001" />
+                        </defs>
+                        <text class="circle-text" x="0" y="0" text-anchor="middle">
+                            <textPath xlink:href="#textPath" startOffset="50%">JANGAN STRESS</textPath>
+                        </text>
+                    </svg>
+                </div>
+                <div class="gambar"></div>
+
+
+                <div class="brand text-center">
+
+                    <svg class="logo ux" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252.76 135.16">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #fff;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 0.5px;
+                                }
+
+                                .cls-2 {
+                                    fill: #fff;
+                                }
+
+                                .cls-3 {
+                                    fill: #dadada;
+                                }
+                            </style>
+                        </defs>
+                        <title>logo</title>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path class="cls-1"
+                                    d="M30.47,101.29v33.5a93.48,93.48,0,0,1-10.41-3.48V97.81A91.46,91.46,0,0,0,30.47,101.29Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M66.56,139.25c-4.61.05-6.92,0-11.54-.32-2-5.25-3-7.9-5-13.23-1.31-.14-2-.22-3.28-.39v12.81a99.16,99.16,0,0,1-10.41-1.84v-33.5a103,103,0,0,0,17.71,2.59c3.91.29,6.94,1.26,9.11,3.09a8.93,8.93,0,0,1,3.24,7.16,10.72,10.72,0,0,1-1.19,5.12,9.58,9.58,0,0,1-4.82,3.85C62.88,130.51,64.11,133.43,66.56,139.25ZM46.79,118.14c1.78.24,2.67.34,4.44.51a5.07,5.07,0,0,0,3.16-.54,2.52,2.52,0,0,0,1.19-2.3c0-2.15-1.33-3.28-4-3.53-1.92-.18-2.87-.29-4.79-.54Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M92.67,124.62c-4.42.61-6.63.87-11,1.28v12.54c-4.06.38-6.08.52-10.14.68V105.63A193.9,193.9,0,0,0,96,103.19v8c-5.75.86-8.63,1.23-14.38,1.76v5.45c4.42-.41,6.63-.68,11-1.28Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M128.3,130.83l-8.48,1.66c-3.71-5.2-5.57-7.8-9.28-13a44.36,44.36,0,0,1-3.61-6.27,21.14,21.14,0,0,1,.82,5.35v16.22c-3.38.6-5.07.89-8.45,1.43v-33.5c3.94-.62,5.91-1,9.84-1.68,3.16,4.34,4.74,6.49,7.9,10.8a35.65,35.65,0,0,1,3.58,5.74,45.73,45.73,0,0,1-.8-8.64V99l8.48-1.66Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M164.39,124.7c-4.61.56-6.92.9-11.54,1.63-2-4.8-3-7.2-4.95-12l-3.28.57v12.81c-4.17.75-6.25,1.14-10.41,2V96.18c7.08-1.37,10.63-2,17.71-3.19,3.91-.64,6.94-.16,9.11,1.35a7.73,7.73,0,0,1,3.24,6.74,11.51,11.51,0,0,1-1.2,5.27,12.3,12.3,0,0,1-4.81,4.56C160.71,116.4,161.94,119.16,164.39,124.7Zm-19.77-16.94c1.78-.32,2.66-.48,4.44-.78a6.49,6.49,0,0,0,3.16-1.33,3.21,3.21,0,0,0,1.19-2.57c0-2.14-1.33-3-4-2.56-1.92.32-2.88.49-4.79.83Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M169.31,124.15V90.66c5.25-.53,7.87-.72,13.12-.9,5.69-.19,10,1.62,12.79,5.1a18.34,18.34,0,0,1,4.25,11.86c0,5-1.52,8.92-4.56,11.91s-7,4.47-11.84,4.61C177.57,123.4,174.81,123.6,169.31,124.15Zm10.41-8.49,2.71-.11a5.44,5.44,0,0,0,4.36-2.56,11.45,11.45,0,0,0,1.77-6.75A12,12,0,0,0,187,99.93a4.81,4.81,0,0,0-4.55-2.56c-1.09,0-1.63.06-2.71.11Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M232.63,97.62v33.49a91.39,91.39,0,0,0-10.41-3.47v-13c-3.18-.9-4.77-1.28-7.95-1.93v13a101.21,101.21,0,0,0-10.4-1.65V90.56a98.59,98.59,0,0,1,10.4,1.66v12.31c3.18.66,4.77,1,7.95,1.93V94.14A93.48,93.48,0,0,1,232.63,97.62Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-2"
+                                    d="M31.31,56.29v34a92.82,92.82,0,0,1-10.44-3.51v-34A92.82,92.82,0,0,0,31.31,56.29Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-2"
+                                    d="M67.49,94.81c-4.63,0-6.94,0-11.57-.33-2-5.33-3-8-5-13.43-1.32-.14-2-.22-3.29-.4v13a100.26,100.26,0,0,1-10.44-1.86v-34A102.52,102.52,0,0,0,55,60.43c3.91.29,7,1.28,9.12,3.14a9.08,9.08,0,0,1,3.25,7.26A11,11,0,0,1,66.17,76a9.62,9.62,0,0,1-4.83,3.9C63.8,85.93,65,88.91,67.49,94.81ZM47.67,73.38c1.78.24,2.67.34,4.45.52a5,5,0,0,0,3.17-.55A2.55,2.55,0,0,0,56.48,71c0-2.17-1.34-3.32-4-3.58-1.92-.18-2.88-.29-4.8-.55Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-2"
+                                    d="M93.66,80c-4.44.6-6.65.87-11.08,1.28V94c-4.07.37-6.1.52-10.16.68v-34A191.05,191.05,0,0,0,97,58.26v8.1c-5.76.85-8.65,1.22-14.41,1.75v5.53c4.43-.41,6.64-.67,11.08-1.28Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-2"
+                                    d="M129.36,86.39l-8.49,1.66c-3.72-5.29-5.58-7.93-9.31-13.26A45.26,45.26,0,0,1,108,68.43a21.77,21.77,0,0,1,.82,5.43V90.32c-3.38.6-5.08.89-8.46,1.43v-34c3.94-.63,5.91-1,9.86-1.68,3.16,4.4,4.75,6.59,7.92,11a37.65,37.65,0,0,1,3.58,5.83,47,47,0,0,1-.8-8.76V54.06l8.49-1.66Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-2"
+                                    d="M165.55,80.25c-4.63.56-6.94.89-11.57,1.63-2-4.88-3-7.31-5-12.17l-3.29.58v13c-4.17.75-6.26,1.15-10.43,2v-34c7.1-1.37,10.65-2,17.76-3.2,3.91-.63,6.95-.15,9.12,1.4a7.87,7.87,0,0,1,3.25,6.84,11.9,11.9,0,0,1-1.19,5.34,12.44,12.44,0,0,1-4.84,4.63C161.85,71.82,163.08,74.62,165.55,80.25ZM145.72,63c1.79-.32,2.68-.48,4.46-.78a6.37,6.37,0,0,0,3.16-1.35,3.24,3.24,0,0,0,1.2-2.6c0-2.18-1.34-3.06-4-2.61-1.92.32-2.88.49-4.81.84Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-2"
+                                    d="M170.48,79.7v-34c5.25-.52,7.88-.72,13.14-.89,5.71-.18,10,1.65,12.83,5.18a18.84,18.84,0,0,1,4.25,12c0,5.08-1.52,9.06-4.56,12.09s-7,4.52-11.87,4.66C178.75,79,176,79.15,170.48,79.7Zm10.43-8.6,2.71-.11a5.4,5.4,0,0,0,4.37-2.6,11.61,11.61,0,0,0,1.78-6.84,12.3,12.3,0,0,0-1.58-6.4,4.84,4.84,0,0,0-4.57-2.61l-2.71.11Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-2"
+                                    d="M234,52.78v34a92.82,92.82,0,0,0-10.44-3.51V70c-3.18-.9-4.78-1.29-8-2V81.31a99.37,99.37,0,0,0-10.44-1.67v-34a99.37,99.37,0,0,1,10.44,1.67v12.5c3.18.66,4.78,1,8,2V49.27A92.82,92.82,0,0,1,234,52.78Z"
+                                    transform="translate(0 -4.36)" />
+                                <circle class="cls-3" cx="6.36" cy="64.54" r="6.36" />
+                                <circle class="cls-3" cx="246.4" cy="64.54" r="6.36" />
+                                <path class="cls-1"
+                                    d="M30.88,16.15v33.5a94,94,0,0,1-10.4-3.48V12.67A94,94,0,0,0,30.88,16.15Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M67,54.11c-4.62,0-6.92,0-11.54-.32-2-5.26-3-7.9-4.95-13.24-1.32-.13-2-.21-3.28-.38V53A99.16,99.16,0,0,1,36.8,51.13V17.64a102.83,102.83,0,0,0,17.71,2.59c3.91.29,6.94,1.26,9.1,3.09a8.89,8.89,0,0,1,3.25,7.16,10.61,10.61,0,0,1-1.2,5.12,9.55,9.55,0,0,1-4.82,3.85C63.3,45.36,64.53,48.29,67,54.11ZM47.21,33c1.77.23,2.66.34,4.44.51A5.14,5.14,0,0,0,54.81,33,2.5,2.5,0,0,0,56,30.66c0-2.14-1.33-3.28-4-3.53-1.92-.17-2.88-.28-4.79-.54Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M93.09,39.48c-4.42.6-6.63.87-11.06,1.28V53.3c-4,.37-6.08.52-10.13.68V20.48A190.29,190.29,0,0,0,96.42,18v8c-5.76.85-8.63,1.23-14.39,1.76v5.45c4.43-.41,6.64-.68,11.06-1.29Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M128.71,45.69c-3.39.66-5.08,1-8.47,1.65-3.71-5.19-5.57-7.8-9.29-13a44.39,44.39,0,0,1-3.6-6.27,21.27,21.27,0,0,1,.82,5.36V49.61c-3.38.6-5.07.89-8.45,1.42V17.54c3.94-.63,5.9-1,9.84-1.68,3.16,4.34,4.74,6.49,7.9,10.79A37.3,37.3,0,0,1,121,32.39a45.63,45.63,0,0,1-.8-8.63V13.85l8.47-1.66Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M164.81,39.56c-4.62.56-6.92.89-11.54,1.63-2-4.81-3-7.2-5-12l-3.29.58V42.59c-4.16.74-6.24,1.14-10.4,1.95V11c7.08-1.37,10.62-2,17.71-3.2,3.91-.63,6.94-.16,9.1,1.36a7.7,7.7,0,0,1,3.24,6.74,11.46,11.46,0,0,1-1.19,5.26,12.28,12.28,0,0,1-4.82,4.57C161.13,31.26,162.35,34,164.81,39.56ZM145,22.61l4.45-.77a6.49,6.49,0,0,0,3.16-1.33,3.23,3.23,0,0,0,1.19-2.57c0-2.15-1.33-3-4-2.56-1.92.32-2.88.49-4.8.83Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M169.73,39V5.51c5.24-.52,7.87-.72,13.11-.89,5.7-.19,10,1.62,12.8,5.09a18.38,18.38,0,0,1,4.25,11.86c0,5-1.52,8.93-4.56,11.92s-7,4.46-11.84,4.61C178,38.26,175.23,38.46,169.73,39Zm10.41-8.49,2.7-.11a5.45,5.45,0,0,0,4.36-2.57A11.36,11.36,0,0,0,189,21.09a12.1,12.1,0,0,0-1.58-6.3,4.82,4.82,0,0,0-4.56-2.56c-1.08,0-1.62,0-2.7.11Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M233.05,12.48V46a93.48,93.48,0,0,0-10.41-3.48v-13c-3.18-.89-4.77-1.27-7.95-1.92v13a101,101,0,0,0-10.41-1.66V5.42a101,101,0,0,1,10.41,1.65V19.39c3.18.65,4.77,1,7.95,1.93V9A91.46,91.46,0,0,1,233.05,12.48Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M28.47,61.43v33.5a91.46,91.46,0,0,1-10.41-3.48V58A91.39,91.39,0,0,0,28.47,61.43Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M64.56,99.39c-4.61,0-6.92,0-11.54-.31-2-5.26-3-7.91-5-13.24-1.31-.14-2-.22-3.28-.39V98.26a99.16,99.16,0,0,1-10.41-1.84V62.92a101.05,101.05,0,0,0,17.71,2.59c3.91.3,6.94,1.27,9.11,3.1a8.89,8.89,0,0,1,3.24,7.15,10.68,10.68,0,0,1-1.2,5.13,9.56,9.56,0,0,1-4.81,3.85C60.88,90.65,62.11,93.58,64.56,99.39ZM44.79,78.29c1.78.23,2.67.33,4.44.5a5.07,5.07,0,0,0,3.16-.54A2.5,2.5,0,0,0,53.58,76c0-2.14-1.33-3.28-4-3.53-1.92-.18-2.88-.29-4.79-.54Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M90.67,84.76c-4.42.61-6.63.88-11,1.28V98.58c-4.06.38-6.09.52-10.14.69V65.77A190.29,190.29,0,0,0,94,63.33v8c-5.75.85-8.63,1.22-14.38,1.75v5.45c4.42-.41,6.63-.67,11-1.28Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M126.29,91l-8.47,1.66c-3.71-5.2-5.57-7.8-9.28-13a43.4,43.4,0,0,1-3.61-6.27,21.2,21.2,0,0,1,.82,5.35V94.89c-3.38.6-5.07.89-8.45,1.43V62.82c3.94-.62,5.91-1,9.84-1.67,3.16,4.33,4.74,6.49,7.9,10.79a36.54,36.54,0,0,1,3.58,5.74,45.7,45.7,0,0,1-.8-8.63V59.13c3.39-.65,5.09-1,8.47-1.65Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M162.39,84.84c-4.61.56-6.92.9-11.54,1.64-2-4.81-3-7.21-4.95-12l-3.28.58V87.88c-4.17.74-6.25,1.14-10.41,1.94V56.32c7.08-1.36,10.63-2,17.71-3.19,3.91-.63,6.94-.16,9.1,1.36a7.71,7.71,0,0,1,3.25,6.74,11.47,11.47,0,0,1-1.2,5.26,12.35,12.35,0,0,1-4.82,4.57C158.71,76.54,159.94,79.3,162.39,84.84ZM142.62,67.9c1.78-.32,2.66-.47,4.44-.77a6.59,6.59,0,0,0,3.16-1.34,3.2,3.2,0,0,0,1.19-2.57c0-2.14-1.33-3-4-2.56-1.92.33-2.88.49-4.79.84Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M167.31,84.3V50.8c5.25-.53,7.87-.72,13.12-.9,5.69-.18,10,1.62,12.79,5.1a18.38,18.38,0,0,1,4.25,11.86c0,5-1.52,8.93-4.56,11.92s-7,4.46-11.84,4.6C175.57,83.54,172.81,83.74,167.31,84.3Zm10.41-8.49c1.08-.06,1.62-.08,2.71-.11a5.48,5.48,0,0,0,4.36-2.57,11.43,11.43,0,0,0,1.77-6.75A12,12,0,0,0,185,60.07a4.83,4.83,0,0,0-4.55-2.56l-2.71.11Z"
+                                    transform="translate(0 -4.36)" />
+                                <path class="cls-1"
+                                    d="M230.63,57.76v33.5a93.48,93.48,0,0,0-10.41-3.48v-13c-3.18-.89-4.77-1.27-7.95-1.93v13a98.59,98.59,0,0,0-10.4-1.66V50.7a101.26,101.26,0,0,1,10.4,1.66V64.68c3.18.65,4.77,1,7.95,1.92V54.28A93.48,93.48,0,0,1,230.63,57.76Z"
+                                    transform="translate(0 -4.36)" />
+                            </g>
+                        </g>
+                    </svg>
+
+                    <!-- <img src="logo.svg" alt="" class="logo ux"> -->
+                </div>
+                <div class="container illus">
+                    <h1>
+                        Hi, I'm <strong tooltip="singkatnya, irfnrdh -> ind -> id" class="me hover-it"><a id="btn-section-about"  data-target="#section-about"
+                            data-toggle="modal" data-backdrop="static" data-keyboard="false" data-bg="mee.jpg">Irfannur Diah.</a> </strong> a <span
+                            tooltip="Sukanya main desain depan-belakang"><a href="https://google.com" data-bgcolor="#1A1A1A" data-bg="https://tympanus.net/Development/ImageDraggingEffects/2.cddf9094.jpg" class="hover-it">Full-Stack</a></span>
+                            Designer 
+                            based in Aceh,
+                        <strong  tooltip="JAYA!" flow="right"><u>Ind</u>onesia.</strong>
+                        visual enthusiast.
+                        <a id="btn-section-logo"  data-target="#logoh"  data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff"  data-bgcolor="#1c2858" data-bg="logo.jpg">Logo & Brand</a>
+                        <a id="btn-section-uiux"  data-target="#section-uiux"  data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff"  data-bgcolor="#125de2" data-bg="uiux.jpg">UI/UX</a>
+                        <a id="btn-section-brand" data-target="#section-brand" data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff"  data-bgcolor="#347c61" data-bg="brand.jpg">Front-End</a>
+                        <a id="btn-section-illus" data-target="#section-illus" data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff"  data-bgcolor="#1c4758" data-bg="ilus.jpg" >Illustration</a>
+                        <a id="btn-section-typo"  data-target="#section-typo"  data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff" data-bgcolor="#90160d"  data-bg="type.jpg" >Typography</a>
+                        
+                    </h1>
+
+                    <p>check out my story on <a href="https://instagram.com/irfnrdh">instagram</a>, follow my journey on <a href="https://twitter.com/irfnrdh">twitter</a>, see
+                        my last
+                        portofolio on <a href="">behance</a>,
+                        get my source code on <a href="https://github.com/irfnrdh">github</a>, read my dailynotes on <a href="https://medium.com/irfnrdh">medium</a>, get in
+                        touch with
+                        me on <a href="https://t.me/irfnrdh">telegram</a>,
+                        <!-- read my life cv  -->
+                        connect with me on <a href="https://linkedin.com/irfnrdh">linkedin</a>, send me email <a href="mailto:irfnrdh@gmail.com">irfnrdh@gmail.com</a> to
+                        collaborate
+                        with me.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="circle-cursor circle-cursor--outer "></div>
+    <div class="circle-cursor circle-cursor--inner"></div>
+
+    <!-- <section></section>
+    <footer>
+        <h1>Footer</h1>
+      </footer> -->
+
+
+    <!-- .modal About-->
+    <div class="modal fade modal-fullscreen " id="section-about">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <div class="modal-body" data-theme="blue">
+
+                    <div class="text-right sticky-top">
+                        <button type="button" class=" btn btn-lg btn-secondary action-button previous_button"
+                            data-dismiss="modal">&times;</button>
+                        <!-- <button type="button" class="btn btn-sm btn-primary next action-button">Selanjutnya</button> -->
+                    </div>
+
+                    <div class="container pt-0 pb-5">
+                        <h1 class="text-center textline" data-text="CERITA DULU">THE STORY</h1>
+                        <p >Menjadi kreatif developer jauh dikampung dalam bukanlah hal yang mudah jika tidak punya gerbang untuk menunjukan sekucil cerita kepada dunia.</p>
+                        <p class="pt-0">Bagi keluargaku, ini bukanlah hal yang terpenting. tapi bagiku ini adalah sebuah jalan yang bisa aku lakukan untuk mendapatkan rezeki, teman, koneksi bahkan klien.</p>
+                        <p class="pt-0">Kreatifitas bisa mati jika tidak di salurkan dan akhirnya menjadi bomerang yang dapat merusak diri.</p>
+                        <p class="pt-0">Aku sempat menyerah dalam hidup ini mengerjakan project tanpa terhitung jumlahnya dan akhirnya gagal ditengah jalan tanpa ada pengembangan yang lebih lanjut. </p>
+                        <p class="pt-0">Tapi Setelah kisah itu, aku mulai yakin "pasti ada jalan" dan mengatakan tidak menyerah begitu saja.</p>
+                        <p class="pt-0">Terima kasih untuk semuanya yang telah menganggap ini adalah hal yang aneh & omong kosong.</p>
+                        <p class="pt-0">Salamku selalu menyertaimu.</p>
+                        
+                    </div>
+
+                   
+
+                    
+                </div>
+            </div>
+        </div>
+
+    <!-- .modal Logo-->
+    <div class="modal fade" id="logoh"  tabindex="-1" role="dialog" aria-labelledby="logoh" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body demo-1" data-theme="blue">
+                    <div class="text-right sticky-top">
+                        <button type="button" class=" btn btn-lg btn-secondary action-button previous_button"
+                            data-dismiss="modal">&times;</button>
+                        <!-- <button type="button" class="btn btn-sm btn-primary next action-button">Selanjutnya</button> -->
+                    </div>
+                    <div class="container pt-0">
+                        <h1 class="text-center textline" data-text="CERITA DULU">THE STORY</h1>                    
+                    </div>
+
+                    <div class="horizontal-scroll">
+                        <div class="horizontal-scroll__block horizontal-scroll__block--purple">
+                          <div class="background" style="background-image: url(https://source.unsplash.com/category/nature/1024x758)"></div>
+                          <span class="letter">A</span>
+                        </div>
+                        <div class="horizontal-scroll__block horizontal-scroll__block--yellow">
+                          <div class="background" style="background-image: url(https://source.unsplash.com/category/technology/1024x758)"></div>
+                          <span class="letter">E</span>
+                        </div>
+                        <div class="horizontal-scroll__block horizontal-scroll__block--orange">
+                          <div class="background" style="background-image: url(https://source.unsplash.com/category/buildings/1024x758)"></div>
+                          <span class="letter">I</span>
+                        </div>
+                        <div class="horizontal-scroll__block horizontal-scroll__block--blue">
+                          <div class="background" style="background-image: url(https://source.unsplash.com/category/food/1024x758)"></div>
+                          <span class="letter">O</span>
+                        </div>
+                        <div class="horizontal-scroll__block horizontal-scroll__block--green">
+                          <div class="background" style="background-image: url(https://source.unsplash.com/category/people/1024x758)"></div>
+                          <span class="letter">U</span>
+                        </div>
+                        <div class="horizontal-scroll__block horizontal-scroll__block--pink">
+                          <div class="background" style="background-image: url(https://source.unsplash.com/category/objects/1024x758)"></div>
+                          <span class="letter">!</span>
+                        </div>
+                      </div>
+                </div>
+            </div>
+    </div>
+
+    
+
+    <!-- .modal Brand-->
+    <div class="modal fade" id="section-brand">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <div class="modal-body demo-1" data-theme="blue">
+
+                    <div class="text-right sticky-top">
+                        <button type="button" class=" btn btn-lg btn-secondary action-button previous_button"
+                            data-dismiss="modal">&times;</button>
+                        <!-- <button type="button" class="btn btn-sm btn-primary next action-button">Selanjutnya</button> -->
+                    </div>
+
+                    <div class="container pt-0">
+                        <h1 class="text-center textline" data-text="CERITA DULU">THE STORY</h1>
+                        <p >Menjadi kreatif developer jauh dikampung dalam bukanlah hal yang mudah jika tidak punya gerbang untuk menunjukan sekucil cerita kepada dunia.</p>
+                        <p class="pt-0">Bagi keluargaku, ini bukanlah hal yang terpenting. tapi bagiku ini adalah sebuah jalan yang bisa aku lakukan untuk mendapatkan rezeki, teman, koneksi bahkan klien.</p>
+                        <p class="pt-0">Kreatifitas bisa mati jika tidak di salurkan dan akhirnya menjadi bomerang yang dapat merusak diri.</p>
+                        <p class="pt-0">Aku sempat menyerah dalam hidup ini mengerjakan project tanpa terhitung jumlahnya dan akhirnya gagal ditengah jalan tanpa ada pengembangan yang lebih lanjut. </p>
+                        <p class="pt-0">Tapi Setelah kisah itu, aku mulai yakin "pasti ada jalan" dan mengatakan tidak menyerah begitu saja.</p>
+                        <p class="pt-0">Terima kasih untuk semuanya yang telah menganggap ini adalah hal yang aneh & omong kosong.</p>
+                        <p class="pt-0">Salamku selalu menyertaimu.</p>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- .modal Illustration-->
+    <div class="modal fade" id="section-illus">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <div class="modal-body demo-1" data-theme="blue">
+
+                    <div class="text-right sticky-top">
+                        <button type="button" class=" btn btn-lg btn-secondary action-button previous_button"
+                            data-dismiss="modal">&times;</button>
+                        <!-- <button type="button" class="btn btn-sm btn-primary next action-button">Selanjutnya</button> -->
+                    </div>
+
+                    <div class="container pt-0">
+                        <h1 class="text-center textline" data-text="CERITA DULU">THE STORY</h1>
+                        <p >Menjadi kreatif developer jauh dikampung dalam bukanlah hal yang mudah jika tidak punya gerbang untuk menunjukan sekucil cerita kepada dunia.</p>
+                        <p class="pt-0">Bagi keluargaku, ini bukanlah hal yang terpenting. tapi bagiku ini adalah sebuah jalan yang bisa aku lakukan untuk mendapatkan rezeki, teman, koneksi bahkan klien.</p>
+                        <p class="pt-0">Kreatifitas bisa mati jika tidak di salurkan dan akhirnya menjadi bomerang yang dapat merusak diri.</p>
+                        <p class="pt-0">Aku sempat menyerah dalam hidup ini mengerjakan project tanpa terhitung jumlahnya dan akhirnya gagal ditengah jalan tanpa ada pengembangan yang lebih lanjut. </p>
+                        <p class="pt-0">Tapi Setelah kisah itu, aku mulai yakin "pasti ada jalan" dan mengatakan tidak menyerah begitu saja.</p>
+                        <p class="pt-0">Terima kasih untuk semuanya yang telah menganggap ini adalah hal yang aneh & omong kosong.</p>
+                        <p class="pt-0">Salamku selalu menyertaimu.</p>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- .modal typograpi-->
+    <div class="modal fade" id="section-typo">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <div class="modal-body demo-1" data-theme="blue">
+
+                    <div class="text-right sticky-top">
+                        <button type="button" class=" btn btn-lg btn-secondary action-button previous_button"
+                            data-dismiss="modal">&times;</button>
+                        <!-- <button type="button" class="btn btn-sm btn-primary next action-button">Selanjutnya</button> -->
+                    </div>
+
+                    <div class="container pt-0">
+                        <h1 class="text-center textline" data-text="CERITA DULU">THE STORY</h1>
+                        <p >Menjadi kreatif developer jauh dikampung dalam bukanlah hal yang mudah jika tidak punya gerbang untuk menunjukan sekucil cerita kepada dunia.</p>
+                        <p class="pt-0">Bagi keluargaku, ini bukanlah hal yang terpenting. tapi bagiku ini adalah sebuah jalan yang bisa aku lakukan untuk mendapatkan rezeki, teman, koneksi bahkan klien.</p>
+                        <p class="pt-0">Kreatifitas bisa mati jika tidak di salurkan dan akhirnya menjadi bomerang yang dapat merusak diri.</p>
+                        <p class="pt-0">Aku sempat menyerah dalam hidup ini mengerjakan project tanpa terhitung jumlahnya dan akhirnya gagal ditengah jalan tanpa ada pengembangan yang lebih lanjut. </p>
+                        <p class="pt-0">Tapi Setelah kisah itu, aku mulai yakin "pasti ada jalan" dan mengatakan tidak menyerah begitu saja.</p>
+                        <p class="pt-0">Terima kasih untuk semuanya yang telah menganggap ini adalah hal yang aneh & omong kosong.</p>
+                        <p class="pt-0">Salamku selalu menyertaimu.</p>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- .modal uiux-->
+    <div class="modal fade" id="section-uiux">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <div class="modal-body demo-1" data-theme="blue">
+
+                    <div class="text-right sticky-top">
+                        <button type="button" class=" btn btn-lg btn-secondary action-button previous_button"
+                            data-dismiss="modal">&times;</button>
+                        <!-- <button type="button" class="btn btn-sm btn-primary next action-button">Selanjutnya</button> -->
+                    </div>
+
+                    <div class="container pt-0">
+                        <h1 class="text-center textline" data-text="CERITA DULU">THE STORY</h1>
+                        <p >Menjadi kreatif developer jauh dikampung dalam bukanlah hal yang mudah jika tidak punya gerbang untuk menunjukan sekucil cerita kepada dunia.</p>
+                        <p class="pt-0">Bagi keluargaku, ini bukanlah hal yang terpenting. tapi bagiku ini adalah sebuah jalan yang bisa aku lakukan untuk mendapatkan rezeki, teman, koneksi bahkan klien.</p>
+                        <p class="pt-0">Kreatifitas bisa mati jika tidak di salurkan dan akhirnya menjadi bomerang yang dapat merusak diri.</p>
+                        <p class="pt-0">Aku sempat menyerah dalam hidup ini mengerjakan project tanpa terhitung jumlahnya dan akhirnya gagal ditengah jalan tanpa ada pengembangan yang lebih lanjut. </p>
+                        <p class="pt-0">Tapi Setelah kisah itu, aku mulai yakin "pasti ada jalan" dan mengatakan tidak menyerah begitu saja.</p>
+                        <p class="pt-0">Terima kasih untuk semuanya yang telah menganggap ini adalah hal yang aneh & omong kosong.</p>
+                        <p class="pt-0">Salamku selalu menyertaimu.</p>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+        <script src="js/TweenMax.min.js"></script>
+
+        <!-- <script>
+            $(document).scroll(function() {
+            var st = $(this).scrollTop();
+            $("header").css({
+                "background-position-y": (-st/20)
+            })
+            $("#headerc").css({
+                "top": (-st/5),
+                "bottom": (st/5)
+            })
+            });
+        </script> -->
+
+        <script>
+
+            document.body.addEventListener("keyup", keyEvent => {
+            if (keyEvent.key === "Escape") {
+                closeAllModals();
+            }
+            });
+
+
+            $('#logoh').on('shown.bs.modal', function () {
+                $('#btn-section-logo').trigger('focus')
+            })
+
+            $("body a").hover(function() {
+                $this = $(this);
+                $("body").css('background-color', function() {
+                    return $this.data('bgcolor');
+                });
+                $(".gambar").css("background", "url(" + $(this).data("bg") + ")");
+                // $("body").css("background-image", "url(" + $(this).data("bg") + ")");
+            }, function() {
+                $("body").css('background-color','#1A1A1A');
+                $(".gambar").css("background", "url(https://tympanus.net/Development/ImageDraggingEffects/2.cddf9094.jpg)");
+            });
+
+            $(".me").hover(function() {
+                $('head').append('<style>body::before{filter:none;}</style>')
+            }, function() {
+                $('head').append('<style>body::before{-webkit-filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%);filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%) }</style>')
+            });
+
+            class Cursor {
+                constructor() {
+                this.initCursor();
+                this.initHovers();
+                }
+
+                initCursor() {
+                const {
+                    Back
+                } = window;
+                this.outerCursor = document.querySelector(".circle-cursor--outer");
+                this.innerCursor = document.querySelector(".circle-cursor--inner");
+                this.outerCursorBox = this.outerCursor.getBoundingClientRect();
+                this.outerCursorSpeed = 0;
+                this.easing = Back.easeOut.config(1.7);
+                this.clientX = -100;
+                this.clientY = -100;
+                this.showCursor = false;
+
+                const unveilCursor = () => {
+                    TweenMax.set(this.innerCursor, {
+                    x: this.clientX,
+                    y: this.clientY
+                    });
+                    TweenMax.set(this.outerCursor, {
+                    x: this.clientX - this.outerCursorBox.width / 2,
+                    y: this.clientY - this.outerCursorBox.height / 2
+                    });
+                    setTimeout(() => {
+                    this.outerCursorSpeed = 0.2;
+                    }, 100);
+                    this.showCursor = true;
+                };
+                document.addEventListener("mousemove", unveilCursor);
+
+                document.addEventListener("mousemove", e => {
+                    this.clientX = e.clientX;
+                    this.clientY = e.clientY;
+                });
+
+                const render = () => {
+                    TweenMax.set(this.innerCursor, {
+                    x: this.clientX,
+                    y: this.clientY
+                    });
+                    if (!this.isStuck) {
+                    TweenMax.to(this.outerCursor, this.outerCursorSpeed, {
+                        x: this.clientX - this.outerCursorBox.width / 2,
+                        y: this.clientY - this.outerCursorBox.height / 2
+                    });
+                    }
+                    if (this.showCursor) {
+                    document.removeEventListener("mousemove", unveilCursor);
+                    }
+                    requestAnimationFrame(render);
+                };
+                requestAnimationFrame(render);
+                }
+
+                initHovers() {
+                const handleMouseEnter = e => {
+                    this.isStuck = true;
+                    const target = e.currentTarget;
+                    const box = target.getBoundingClientRect();
+                    this.outerCursorOriginals = {
+                    width: this.outerCursorBox.width,
+                    height: this.outerCursorBox.height
+                    };
+                    TweenMax.to(this.outerCursor, 0.2, {
+                    x: box.left,
+                    y: box.top,
+                    width: box.width,
+                    height: box.height,
+                    opacity: 0.4,
+                    borderColor: "#ffc107"
+                    });
+                };
+
+                const handleMouseLeave = () => {
+                    this.isStuck = false;
+                    TweenMax.to(this.outerCursor, 0.2, {
+                    width: this.outerCursorOriginals.width,
+                    height: this.outerCursorOriginals.height,
+                    borderColor: "#ffc107"
+                    });
+                };
+
+                const linkItems = document.querySelectorAll(".link");
+                linkItems.forEach(item => {
+                    item.addEventListener("mouseenter", handleMouseEnter);
+                    item.addEventListener("mouseleave", handleMouseLeave);
+                });
+
+                const mainNavHoverTween = TweenMax.to(this.outerCursor, 0.3, {
+                    backgroundColor: "#ffc107",
+                    borderColor: '#fff',
+                    ease: this.easing,
+                    paused: true
+                });
+
+                const mainNavMouseEnter = () => {
+                    this.outerCursorSpeed = 0;
+                    TweenMax.set(this.innerCursor, {
+                    opacity: 0
+                    });
+                    mainNavHoverTween.play();
+                };
+
+                const mainNavMouseLeave = () => {
+                    this.outerCursorSpeed = 0.3;
+                    TweenMax.set(this.innerCursor, {
+                    opacity: 1
+                    });
+                    mainNavHoverTween.reverse();
+                };
+
+                const mainNavLinks = document.querySelectorAll(".nav-link");
+                mainNavLinks.forEach(item => {
+                    item.addEventListener("mouseenter", mainNavMouseEnter);
+                    item.addEventListener("mouseleave", mainNavMouseLeave);
+                });
+                }
+            }
+            $(document).ready(function () {
+                const cursor = new Cursor();
+            });
+
+        </script>
+
+       
+</body>
+
+</html>
