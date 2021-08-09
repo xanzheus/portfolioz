@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
     <title>Irfannur Diah - Someone often called "Strange" & "Mysterious"</title>
 
@@ -27,10 +28,9 @@
             /* overflow-y: hidden; */
             -webkit-transition: all 300ms linear;
             transition: all 300ms linear;
-
         }
 
-        .gambar{
+        .gambar {
             background: url(me.jpg) no-repeat;
             content: "";
             height: 260px;
@@ -39,10 +39,10 @@
             right: 100px;
             position: absolute;
             z-index: -2;
-            background-size: cover !important ;
+            background-size: cover !important;
         }
 
-        body::before{
+        body::before {
             background: url(me.jpg);
             content: "";
             height: 280px;
@@ -54,10 +54,10 @@
             background-size: cover;
             /* filter dahhh :v dimari -> https://www.cssfilters.co/ */
             -webkit-filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%);
-            filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%) ;
+            filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%);
             /* blur(10px); */
-          
-       
+
+
         }
 
         [data-theme="dark"] {
@@ -65,7 +65,7 @@
             --color-contrast-high: #c4c3ca;
         }
 
-        
+
         [data-theme="blue"] {
             --color-bg: #1A1A1A;
             --color-contrast-high: #c4c3ca;
@@ -82,7 +82,7 @@
             color: #fff;
         }
 
-        .textline::before{
+        .textline::before {
             content: attr(data-text);
             font-weight: 400;
             font-size: 6vw;
@@ -163,7 +163,7 @@
             border-bottom: 4px solid #fff;
             display: inline-block;
             padding-bottom: 4px;
-            text-decoration: none;            
+            text-decoration: none;
         }
 
         .stuff:hover {
@@ -171,7 +171,7 @@
             color: #FBB03B;
             border-bottom-color: #FBB03B;
             transform: rotateY(3.51215deg) rotateX(-5.53915deg) rotateZ(0deg) scale(1.05);
-                    transition: all .4s cubic-bezier(.4,0,.2,1);
+            transition: all .4s cubic-bezier(.4, 0, .2, 1);
         }
 
         /* body:hover a {
@@ -444,11 +444,11 @@
                 font-size: 12pt;
             }
 
-            .gambar{
+            .gambar {
                 display: none;
             }
 
-            body::before{
+            body::before {
                 display: none;
             }
         }
@@ -491,27 +491,27 @@
             color: var(--color-link);
             outline: none;
             cursor: pointer;
-            font-weight:400;
+            font-weight: 400;
         }
 
-        p a::after { 
-            content: ''; 
-            position: absolute; 
-            width: 100%; 
-            height: 1px; 
-            background: currentColor; 
-            bottom: -0.1vw; 
-            left: 0; 
-            opacity: 0; 
-            transform-origin: 0% 50%; 
-            transform: scaleX(0); 
-            transition: all 0.25s ease-out; 
-        } 
-        
-        p a:hover::after, 
-        p a:focus::after { 
-            opacity: 1; 
-            transform: scaleX(1); 
+        p a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: currentColor;
+            bottom: -0.1vw;
+            left: 0;
+            opacity: 0;
+            transform-origin: 0% 50%;
+            transform: scaleX(0);
+            transition: all 0.25s ease-out;
+        }
+
+        p a:hover::after,
+        p a:focus::after {
+            opacity: 1;
+            transform: scaleX(1);
         }
 
         p a {
@@ -520,155 +520,193 @@
             position: relative;
         }
 
-        
+
         .modal-dialog {
-        max-width: 100%;
-        margin: 0;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100vh;
-        display: flex;
-        position: fixed;
-        z-index: 100000;
-        border-radius: 0px;
+            max-width: 100%;
+            margin: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            display: flex;
+            position: fixed;
+            z-index: 100000;
+            border-radius: 0px;
         }
 
-        .modal-content{
-        border-radius: 0px;
+        .modal-content {
+            border-radius: 0px;
         }
 
-        .modal-body{
+        .modal-body {
             overflow-y: auto;
         }
-        
-        
+
+
         /* cursor  */
 
         * {
-        cursor: none;
+            cursor: none;
         }
+
         @media only screen and (max-width: 1000px) {
-        * {
-            cursor: initial;
-        }
+            * {
+                cursor: initial;
+            }
         }
 
         .circle-cursor {
-        position: fixed;
-        left: 0;
-        top: 0;
-        pointer-events: none;
-        border-radius: 50%;
-        box-sizing: border-box;
-        }
-        .circle-cursor--outer {
-        width: 30px;
-        height: 30px;
-        border: 2px solid  #ffc107;
-        z-index: 12000;
-        }
-        .circle-cursor--inner {
-        width: 5px;
-        height: 5px;
-        left: -2.5px;
-        top: -2.5px;
-        z-index: 11000;
-        background:  #ffc107;
+            position: fixed;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            border-radius: 50%;
+            box-sizing: border-box;
         }
 
-        .hover-it:hover{
+        .circle-cursor--outer {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #ffc107;
+            z-index: 12000;
+        }
+
+        .circle-cursor--inner {
+            width: 5px;
+            height: 5px;
+            left: -2.5px;
+            top: -2.5px;
+            z-index: 11000;
+            background: #ffc107;
+        }
+
+        .hover-it:hover {
             font-style: italic;
         }
 
-        
-::-webkit-scrollbar {
-  width: 1px;
-  height: 1px;
-}
 
-::-webkit-scrollbar-button {
-  width: 1px;
-  height: 1px;
-}
+        ::-webkit-scrollbar {
+            width: 1px;
+            height: 1px;
+        }
 
-.horizontal-scroll {
-  width: 100vh;
-  height: 100vw;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background: #2E2E2E;
-  padding: 30px;
-  -webkit-transform-origin: right top;
-          transform-origin: right top;
-  -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
-          transform: rotate(-90deg) translate3d(0, -100vh, 0);
-}
-.horizontal-scroll > * {
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
-          transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
-}
-.horizontal-scroll__block {
-  width: calc(100vh - 60px);
-  height: calc(100vh - 60px);
-  background: #FDFFFC;
-  position: relative;
-}
-.horizontal-scroll__block:not(:first-child) {
-  margin-top: 30px;
-}
-.horizontal-scroll__block .background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: no-repeat center center / cover;
-  opacity: .8;
-  background-blend-mode: luminosity;
-}
-.horizontal-scroll__block .letter {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
-  font-weight: normal;
-  font-size: 12em;
-  font-family: 'Playfair Display', serif;
-  color: white;
-}
-.horizontal-scroll__block--purple .background {
-  background-color: #52489C;
-}
-.horizontal-scroll__block--yellow .background {
-  background-color: #ECC30B;
-}
-.horizontal-scroll__block--orange .background {
-  background-color: #F37748;
-}
-.horizontal-scroll__block--blue .background {
-  background-color: #4D9DE0;
-}
-.horizontal-scroll__block--green .background {
-  background-color: #00BD9D;
-}
-.horizontal-scroll__block--pink .background {
-  background-color: #FB9F89;
-}
+        ::-webkit-scrollbar-button {
+            width: 1px;
+            height: 1px;
+        }
+
+        .horizontal-scroll {
+            width: 100vh;
+            height: 100vw;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #2E2E2E;
+            padding: 30px;
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
+            transform: rotate(-90deg) translate3d(0, -100vh, 0);
+        }
+
+        .horizontal-scroll>* {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+            transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+        }
+
+        .horizontal-scroll__block {
+            width: calc(100vh - 60px);
+            height: calc(100vh - 60px);
+            background: #FDFFFC;
+            position: relative;
+        }
+
+        .horizontal-scroll__block:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        .horizontal-scroll__block .background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: no-repeat center center / cover;
+            opacity: .8;
+            background-blend-mode: luminosity;
+        }
+
+        .horizontal-scroll__block .letter {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: auto;
+            bottom: auto;
+            left: 50%;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+            font-weight: normal;
+            font-size: 12em;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+
+        .horizontal-scroll__block--purple .background {
+            background-color: #52489C;
+        }
+
+        .horizontal-scroll__block--yellow .background {
+            background-color: #ECC30B;
+        }
+
+        .horizontal-scroll__block--orange .background {
+            background-color: #F37748;
+        }
+
+        .horizontal-scroll__block--blue .background {
+            background-color: #4D9DE0;
+        }
+
+        .horizontal-scroll__block--green .background {
+            background-color: #00BD9D;
+        }
+
+        .horizontal-scroll__block--pink .background {
+            background-color: #FB9F89;
+        }
+
+
+        .modalwindow {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: 
+        black;
+        transition: all 0.4s;
+        color: white;
+        z-index: 99;
+        }
+
+        .modalwindow:target {
+        visibility: visible;
+        opacity: 1;
+        }
 
     </style>
 </head>
 
 <body>
 
-    
+
 
     <header>
         <div class="center" id="headerc">
@@ -808,30 +846,45 @@
                 </div>
                 <div class="container illus">
                     <h1>
-                        Hi, I'm <strong tooltip="in short, irfnrdh -> ind -> id" class="me hover-it"><a id="btn-section-about"  data-target="#section-about"
-                            data-toggle="modal" data-backdrop="static" data-keyboard="false" data-bg="mee.jpg">Irfannur Diah.</a> </strong> a <span
-                            tooltip="jack of all trades master of some"><a href="https://www.google.com/search?q=full-stack" data-bgcolor="#1A1A1A" data-bg="me.jpg" class="hover-it">Full-Stack</a></span>
-                            <br> 
-                            based in Aceh Tamiang,
-                        <strong  tooltip="JAYA!" flow="right"><u>Ind</u>onesia.</strong>
+                        Hi, I'm <strong tooltip="in short, irfnrdh -> ind -> id" class="me hover-it"><a
+                                id="btn-section-about" data-target="#section-about" data-toggle="modal"
+                                data-backdrop="static" data-keyboard="false" data-bg="mee.jpg">Irfannur Diah.</a>
+                        </strong> a <span tooltip="jack of all trades master of some"><a
+                                href="https://www.google.com/search?q=full-stack" data-bgcolor="#1A1A1A"
+                                data-bg="me.jpg" class="hover-it">Full-Stack</a></span>
+                        <br>
+                        based in Aceh Tamiang,
+                        <strong tooltip="JAYA!" flow="right"><u>Ind</u>onesia.</strong>
                         Enthusiast <small>@ </small>
-                        <a id="btn-section-logo"  data-target="#logoh"  data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff"  data-bgcolor="#1c2858" data-bg="logo.jpg">Logo & Brand</a>
-                        <a id="btn-section-uiux"  data-target="#section-uiux"  data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff"  data-bgcolor="#125de2" data-bg="uiux.jpg">UI/UX</a>
-                        <a id="btn-section-brand" data-target="#section-brand" data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff"  data-bgcolor="#347c61" data-bg="brand.jpg">Front-End</a>
-                        <a id="btn-section-illus" data-target="#section-illus" data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff"  data-bgcolor="#1c4758" data-bg="ilus.jpg" >Illustration</a>
-                        <a id="btn-section-typo"  data-target="#section-typo"  data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff" data-bgcolor="#90160d"  data-bg="type.jpg" >Typography</a>
-                        <a id="btn-section-more"  data-target="#section-more"  data-toggle="modal" data-backdrop="static" data-keyboard="false" class="stuff" data-bgcolor="#000"  data-bg="type.jpg" >Much more</a>
-                        
+                        <a id="btn-section-logo" data-target="#logoh" data-toggle="modal" data-backdrop="static"
+                            data-keyboard="false" class="stuff" data-bgcolor="#1c2858" data-bg="logo.jpg">Logo &
+                            Brand</a>
+                        <a id="btn-section-uiux" data-target="#section-uiux" data-toggle="modal" data-backdrop="static"
+                            data-keyboard="false" class="stuff" data-bgcolor="#125de2" data-bg="uiux.jpg">UI/UX</a>
+                        <a id="btn-section-brand" data-target="#section-brand" data-toggle="modal"
+                            data-backdrop="static" data-keyboard="false" class="stuff" data-bgcolor="#347c61"
+                            data-bg="brand.jpg">Front-End</a>
+                        <a id="btn-section-illus" data-target="#section-illus" data-toggle="modal"
+                            data-backdrop="static" data-keyboard="false" class="stuff" data-bgcolor="#1c4758"
+                            data-bg="ilus.jpg">Illustration</a>
+                        <a id="btn-section-typo" data-target="#section-typo" data-toggle="modal" data-backdrop="static"
+                            data-keyboard="false" class="stuff" data-bgcolor="#90160d" data-bg="type.jpg">Typography</a>
+                        <a id="btn-section-more" href="#MahaIndah"
+                            data-keyboard="false" class="stuff" data-bgcolor="#000" data-bg="type.jpg">Much more</a>
+
                     </h1>
 
-                    <p>check out my story on <a href="https://instagram.com/irfnrdh">instagram</a>, follow my journey on <a href="https://twitter.com/irfnrdh">twitter</a>, see
+                    <p>check out my story on <a href="https://instagram.com/irfnrdh">instagram</a>, follow my journey on
+                        <a href="https://twitter.com/irfnrdh">twitter</a>, see
                         my last
                         portofolio on <a href="https://www.behance.net/irfnrdh">behance</a>,
-                        get my source code on <a href="https://github.com/irfnrdh">github</a>, read my dailynotes on <a href="https://kodekeras.my.id">KodeKeras</a>, get in
+                        get my source code on <a href="https://github.com/irfnrdh">github</a>, read my dailynotes on <a
+                            href="https://kodekeras.my.id">KodeKeras</a>, get in
                         touch with
                         me on <a href="https://t.me/irfnrdh">telegram</a>,
                         <!-- read my life cv  -->
-                        connect with me on <a href="https://linkedin.com/irfnrdh">linkedin</a>, send me email <a href="mailto:irfnrdh@gmail.com">irfnrdh@gmail.com</a> to
+                        connect with me on <a href="https://linkedin.com/irfnrdh">linkedin</a>, send me email <a
+                            href="mailto:irfnrdh@gmail.com">irfnrdh@gmail.com</a> to
                         collaborate
                         with me.</p>
 
@@ -850,11 +903,23 @@
       </footer> -->
 
 
+      <div id="MahaIndah" class="modalwindow">
+        <div class="modalwindow__container">
+          <div class="modalwindow__header">
+            <a href="#" class="modalwindow__close float-right">( &times )</a>
+          </div>
+          <div class="modalwindow__content">
+            <p>"There is nothing most beautiful than (اللّٰه) the Lord of the universe"</p>
+          </div>
+        </div>
+      </div>
+
+
     <!-- .modal About-->
     <div class="modal fade modal-fullscreen " id="section-about">
         <div class="modal-dialog">
             <div class="modal-content">
-            
+
                 <div class="modal-body" data-theme="blue">
 
                     <div class="text-right sticky-top">
@@ -865,32 +930,43 @@
 
                     <div class="container pt-0 pb-5">
                         <h1 class="text-center textline" data-text="CERITA DULU">THE STORY</h1>
-                        <p >Being a creative developer deep in the village is not easy if you don't have a gate to show a small story to the world.</p>
-                        <p class="pt-0">For my family, this is not the most important thing. but for me this is a way I can do to get sustenance, friends, connections and even clients.</p>
-                        <p class="pt-0">Creativity can die if not channeled and eventually become a self-destructing boomerang.</p>
-                        <p class="pt-0">I had given up in this life working on countless projects and ended up failing halfway through without any further development. </p>
-                        <p class="pt-0">But after that story, I started to believe "there must be a way" and said not to give up.</p>
+                        <p>Being a creative developer deep in the village is not easy if you don't have a gate to show a
+                            small story to the world.</p>
+                        <p class="pt-0">For my family, this is not the most important thing. but for me this is a way I
+                            can do to get sustenance, friends, connections and even clients.</p>
+                        <p class="pt-0">Creativity can die if not channeled and eventually become a self-destructing
+                            boomerang.</p>
+                        <p class="pt-0">I had given up in this life working on countless projects and ended up failing
+                            halfway through without any further development. </p>
+                        <p class="pt-0">But after that story, I started to believe "there must be a way" and said not to
+                            give up.</p>
                         <p class="pt-0">Thanks to everyone who thought this was weird & nonsense.</p>
                         <p class="pt-0">My greetings are always with you.</p>
-                        
+
                     </div>
 
-                   
 
-                    
+
+
                 </div>
             </div>
         </div>
 
+</div>
+     
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
         <!-- Optional JavaScript -->
-    <!-- Popper.js first, then Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <!-- Popper.js first, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+        </script>
 
         <script src="js/TweenMax.min.js"></script>
 
@@ -908,11 +984,10 @@
         </script> -->
 
         <script>
-
             document.body.addEventListener("keyup", keyEvent => {
-            if (keyEvent.key === "Escape") {
-                closeAllModals();
-            }
+                if (keyEvent.key === "Escape") {
+                    closeAllModals();
+                }
             });
 
 
@@ -920,153 +995,154 @@
                 $('#btn-section-logo').trigger('focus')
             })
 
-            $("body a").hover(function() {
+            $("body a").hover(function () {
                 $this = $(this);
-                $("body").css('background-color', function() {
+                $("body").css('background-color', function () {
                     return $this.data('bgcolor');
                 });
                 $(".gambar").css("background", "url(" + $(this).data("bg") + ")");
-            }, function() {
-                $("body").css('background-color','#1A1A1A');
+            }, function () {
+                $("body").css('background-color', '#1A1A1A');
                 $(".gambar").css("background", "url(me.jpg)");
             });
 
-            $(".me").hover(function() {
+            $(".me").hover(function () {
                 $('head').append('<style>body::before{filter:none;}</style>')
-            }, function() {
-                $('head').append('<style>body::before{-webkit-filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%);filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%) }</style>')
+            }, function () {
+                $('head').append(
+                    '<style>body::before{-webkit-filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%);filter: contrast(123%) brightness(70%) saturate(0%) grayscale(100%) }</style>'
+                    )
             });
 
             class Cursor {
                 constructor() {
-                this.initCursor();
-                this.initHovers();
+                    this.initCursor();
+                    this.initHovers();
                 }
 
                 initCursor() {
-                const {
-                    Back
-                } = window;
-                this.outerCursor = document.querySelector(".circle-cursor--outer");
-                this.innerCursor = document.querySelector(".circle-cursor--inner");
-                this.outerCursorBox = this.outerCursor.getBoundingClientRect();
-                this.outerCursorSpeed = 0;
-                this.easing = Back.easeOut.config(1.7);
-                this.clientX = -100;
-                this.clientY = -100;
-                this.showCursor = false;
+                    const {
+                        Back
+                    } = window;
+                    this.outerCursor = document.querySelector(".circle-cursor--outer");
+                    this.innerCursor = document.querySelector(".circle-cursor--inner");
+                    this.outerCursorBox = this.outerCursor.getBoundingClientRect();
+                    this.outerCursorSpeed = 0;
+                    this.easing = Back.easeOut.config(1.7);
+                    this.clientX = -100;
+                    this.clientY = -100;
+                    this.showCursor = false;
 
-                const unveilCursor = () => {
-                    TweenMax.set(this.innerCursor, {
-                    x: this.clientX,
-                    y: this.clientY
-                    });
-                    TweenMax.set(this.outerCursor, {
-                    x: this.clientX - this.outerCursorBox.width / 2,
-                    y: this.clientY - this.outerCursorBox.height / 2
-                    });
-                    setTimeout(() => {
-                    this.outerCursorSpeed = 0.2;
-                    }, 100);
-                    this.showCursor = true;
-                };
-                document.addEventListener("mousemove", unveilCursor);
+                    const unveilCursor = () => {
+                        TweenMax.set(this.innerCursor, {
+                            x: this.clientX,
+                            y: this.clientY
+                        });
+                        TweenMax.set(this.outerCursor, {
+                            x: this.clientX - this.outerCursorBox.width / 2,
+                            y: this.clientY - this.outerCursorBox.height / 2
+                        });
+                        setTimeout(() => {
+                            this.outerCursorSpeed = 0.2;
+                        }, 100);
+                        this.showCursor = true;
+                    };
+                    document.addEventListener("mousemove", unveilCursor);
 
-                document.addEventListener("mousemove", e => {
-                    this.clientX = e.clientX;
-                    this.clientY = e.clientY;
-                });
+                    document.addEventListener("mousemove", e => {
+                        this.clientX = e.clientX;
+                        this.clientY = e.clientY;
+                    });
 
-                const render = () => {
-                    TweenMax.set(this.innerCursor, {
-                    x: this.clientX,
-                    y: this.clientY
-                    });
-                    if (!this.isStuck) {
-                    TweenMax.to(this.outerCursor, this.outerCursorSpeed, {
-                        x: this.clientX - this.outerCursorBox.width / 2,
-                        y: this.clientY - this.outerCursorBox.height / 2
-                    });
-                    }
-                    if (this.showCursor) {
-                    document.removeEventListener("mousemove", unveilCursor);
-                    }
+                    const render = () => {
+                        TweenMax.set(this.innerCursor, {
+                            x: this.clientX,
+                            y: this.clientY
+                        });
+                        if (!this.isStuck) {
+                            TweenMax.to(this.outerCursor, this.outerCursorSpeed, {
+                                x: this.clientX - this.outerCursorBox.width / 2,
+                                y: this.clientY - this.outerCursorBox.height / 2
+                            });
+                        }
+                        if (this.showCursor) {
+                            document.removeEventListener("mousemove", unveilCursor);
+                        }
+                        requestAnimationFrame(render);
+                    };
                     requestAnimationFrame(render);
-                };
-                requestAnimationFrame(render);
                 }
 
                 initHovers() {
-                const handleMouseEnter = e => {
-                    this.isStuck = true;
-                    const target = e.currentTarget;
-                    const box = target.getBoundingClientRect();
-                    this.outerCursorOriginals = {
-                    width: this.outerCursorBox.width,
-                    height: this.outerCursorBox.height
+                    const handleMouseEnter = e => {
+                        this.isStuck = true;
+                        const target = e.currentTarget;
+                        const box = target.getBoundingClientRect();
+                        this.outerCursorOriginals = {
+                            width: this.outerCursorBox.width,
+                            height: this.outerCursorBox.height
+                        };
+                        TweenMax.to(this.outerCursor, 0.2, {
+                            x: box.left,
+                            y: box.top,
+                            width: box.width,
+                            height: box.height,
+                            opacity: 0.4,
+                            borderColor: "#ffc107"
+                        });
                     };
-                    TweenMax.to(this.outerCursor, 0.2, {
-                    x: box.left,
-                    y: box.top,
-                    width: box.width,
-                    height: box.height,
-                    opacity: 0.4,
-                    borderColor: "#ffc107"
+
+                    const handleMouseLeave = () => {
+                        this.isStuck = false;
+                        TweenMax.to(this.outerCursor, 0.2, {
+                            width: this.outerCursorOriginals.width,
+                            height: this.outerCursorOriginals.height,
+                            borderColor: "#ffc107"
+                        });
+                    };
+
+                    const linkItems = document.querySelectorAll(".link");
+                    linkItems.forEach(item => {
+                        item.addEventListener("mouseenter", handleMouseEnter);
+                        item.addEventListener("mouseleave", handleMouseLeave);
                     });
-                };
 
-                const handleMouseLeave = () => {
-                    this.isStuck = false;
-                    TweenMax.to(this.outerCursor, 0.2, {
-                    width: this.outerCursorOriginals.width,
-                    height: this.outerCursorOriginals.height,
-                    borderColor: "#ffc107"
+                    const mainNavHoverTween = TweenMax.to(this.outerCursor, 0.3, {
+                        backgroundColor: "#ffc107",
+                        borderColor: '#fff',
+                        ease: this.easing,
+                        paused: true
                     });
-                };
 
-                const linkItems = document.querySelectorAll(".link");
-                linkItems.forEach(item => {
-                    item.addEventListener("mouseenter", handleMouseEnter);
-                    item.addEventListener("mouseleave", handleMouseLeave);
-                });
+                    const mainNavMouseEnter = () => {
+                        this.outerCursorSpeed = 0;
+                        TweenMax.set(this.innerCursor, {
+                            opacity: 0
+                        });
+                        mainNavHoverTween.play();
+                    };
 
-                const mainNavHoverTween = TweenMax.to(this.outerCursor, 0.3, {
-                    backgroundColor: "#ffc107",
-                    borderColor: '#fff',
-                    ease: this.easing,
-                    paused: true
-                });
+                    const mainNavMouseLeave = () => {
+                        this.outerCursorSpeed = 0.3;
+                        TweenMax.set(this.innerCursor, {
+                            opacity: 1
+                        });
+                        mainNavHoverTween.reverse();
+                    };
 
-                const mainNavMouseEnter = () => {
-                    this.outerCursorSpeed = 0;
-                    TweenMax.set(this.innerCursor, {
-                    opacity: 0
+                    const mainNavLinks = document.querySelectorAll(".nav-link");
+                    mainNavLinks.forEach(item => {
+                        item.addEventListener("mouseenter", mainNavMouseEnter);
+                        item.addEventListener("mouseleave", mainNavMouseLeave);
                     });
-                    mainNavHoverTween.play();
-                };
-
-                const mainNavMouseLeave = () => {
-                    this.outerCursorSpeed = 0.3;
-                    TweenMax.set(this.innerCursor, {
-                    opacity: 1
-                    });
-                    mainNavHoverTween.reverse();
-                };
-
-                const mainNavLinks = document.querySelectorAll(".nav-link");
-                mainNavLinks.forEach(item => {
-                    item.addEventListener("mouseenter", mainNavMouseEnter);
-                    item.addEventListener("mouseleave", mainNavMouseLeave);
-                });
                 }
             }
             $(document).ready(function () {
                 const cursor = new Cursor();
             });
-
         </script>
 
-       
+
 </body>
 
 </html>
