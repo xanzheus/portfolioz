@@ -31,7 +31,7 @@
         }
 
         .gambar {
-            background: url(me.jpg) no-repeat;
+            /* background: url(me.jpg) no-repeat; */
             content: "";
             height: 260px;
             width: 180px;
@@ -47,8 +47,10 @@
             content: "";
             height: 280px;
             width: 172px;
-            bottom: 140px;
-            left: 60px;
+            bottom: 231px;
+            left: 142px;
+            /* bottom: 140px;
+            left: 60px; */
             position: absolute;
             z-index: -2;
             background-size: cover;
@@ -1003,7 +1005,7 @@
                 $(".gambar").css("background", "url(" + $(this).data("bg") + ")");
             }, function () {
                 $("body").css('background-color', '#1A1A1A');
-                $(".gambar").css("background", "url(me.jpg)");
+                $(".gambar").css("background", "url()");
             });
 
             $(".me").hover(function () {
